@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DiceRoller</string>
+    <string name="coinText">Coin</string>
+    <string name="d4Text">d4</string>
+    <string name="d6Text">d6</string>
+    <string name="d8Text">d8</string>
+    <string name="d10Text">d10</string>
+    <string name="d12Text">d12</string>
+    <string name="d20Text">d20</string>
+    <string name="yourRollText">Your Roll:</string>
+    <string name="setNameText">Set Name</string>
+    <string name="enterNameText">Enter Name</string>
+    <string name="saveDataText">Save Roll History</string>
+    <string name="deleteDataText">Delete Roll History</string>
+</resources>

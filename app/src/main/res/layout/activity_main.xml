@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgColor"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/d12Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="roll12"
+        android:text="@string/d12Text"
+        app:layout_constraintEnd_toEndOf="@+id/d6Btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/d6Btn"
+        app:layout_constraintTop_toBottomOf="@+id/d6Btn" />
+
+    <Button
+        android:id="@+id/d4Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="roll4"
+        android:text="@string/d4Text"
+        app:layout_constraintEnd_toStartOf="@+id/d6Btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/d6Btn" />
+
+    <Button
+        android:id="@+id/d6Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="roll6"
+        android:text="@string/d6Text"
+        app:layout_constraintEnd_toEndOf="@+id/coinBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/coinBtn"
+        app:layout_constraintTop_toBottomOf="@+id/coinBtn" />
+
+    <Button
+        android:id="@+id/d8Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="roll8"
+        android:text="@string/d8Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/d6Btn"
+        app:layout_constraintTop_toTopOf="@+id/d6Btn" />
+
+    <Button
+        android:id="@+id/d20Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="roll20"
+        android:text="@string/d20Text"
+        app:layout_constraintEnd_toEndOf="@+id/d8Btn"
+        app:layout_constraintStart_toStartOf="@+id/d8Btn"
+        app:layout_constraintTop_toTopOf="@+id/d12Btn" />
+
+    <Button
+        android:id="@+id/d10Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="roll10"
+        android:text="@string/d10Text"
+        app:layout_constraintEnd_toStartOf="@+id/d12Btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/d12Btn" />
+
+    <Button
+        android:id="@+id/coinBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:onClick="rollCoin"
+        android:text="@string/coinText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollOutputScroller" />
+
+        <androidx.core.widget.NestedScrollView
+        android:id="@+id/rollOutputScroller"
+        android:layout_width="369dp"
+        android:layout_height="216dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/rollOutput"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"/>
+    </androidx.core.widget.NestedScrollView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/rollOutput"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="215dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="setName"
+        android:text="@string/setNameText"
+        app:layout_constraintStart_toStartOf="@+id/rollOutputScroller"
+        app:layout_constraintTop_toBottomOf="@+id/rollOutputScroller" />
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="@string/enterNameText"
+        android:autofillHints=".AUTOFILL_HINT_PERSON_NAME"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/rollOutputScroller"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
+
+    <Button
+        android:id="@+id/saveHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/saveDataText"
+        app:layout_constraintStart_toStartOf="@+id/d4Btn"
+        app:layout_constraintTop_toBottomOf="@+id/nameField" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clearFile"
+        android:text="@string/deleteDataText"
+        app:layout_constraintEnd_toEndOf="@+id/d8Btn"
+        app:layout_constraintTop_toTopOf="@+id/saveHistory" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
